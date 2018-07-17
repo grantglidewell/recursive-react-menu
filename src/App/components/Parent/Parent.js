@@ -21,7 +21,7 @@ class Parent extends Component {
         {/* if the item has a title, render it out */}
         {this.props.title && (
           <h2 className={styles.title}>
-            <i className={`fa fa-${this.props.icon}`} /> {this.props.title}
+            <i className={`fa fa-${this.props.icon} ${styles.titleIcon}`} /> {this.props.title}
           </h2>
         )}
         <ul>

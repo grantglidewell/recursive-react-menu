@@ -44,6 +44,11 @@ const content = [
               {
                 name: 'child',
                 ZUID: '8238-235325ads-ewew',
+                icon: 'cube'
+                
+              },{
+                name: 'child',
+                ZUID: '8238-235325ads-ewew',
                 icon: 'cube',
                 children: [
                   { name: 'burried', ZUID: '89234djns23u80', icon: 'cube' }

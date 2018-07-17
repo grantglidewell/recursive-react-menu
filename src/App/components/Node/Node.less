@@ -3,13 +3,12 @@
 .item {
   display: flex;
   align-items: baseline;
-  // background-color: darken(@nav-border-color, 3%);
   i {
     color: @zesty-gray;
-    flex: 1;
-    :last-child {
-      padding: 1rem;
-    }
+    margin-right: 0.5rem;
+    // &:last-child {
+    //   padding: 1rem;
+    // }
   }
   .selected {
     color: @zesty-orange;
@@ -18,15 +17,14 @@
     padding: 0.5rem;
     text-decoration: none;
     color: @zesty-light-blue;
-    span {
-      padding-left: 0.5rem;
-    }
-  }
-  :hover {
-    background-color: @zesty-grey;
+    flex: 1;
+    // span {
+    //   padding-left: 0.5rem;
+    // }
   }
 }
 .active {
+  background-color: lighten(@nav-border-color, 6%);
   transition: all 0.2s ease;
   i {
     color: @zesty-light-gray;

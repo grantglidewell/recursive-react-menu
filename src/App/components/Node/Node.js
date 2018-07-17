@@ -13,7 +13,7 @@ const Node = props => {
         <i
           className={`fa fa-${props.icon} ${props.selected === props.ZUID &&
             styles.selected}`}
-        />{' '}
+        />
         <span>{props.name}</span>
       </a>
       {props.children && (
