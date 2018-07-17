@@ -37,7 +37,7 @@ const content = [
         children: [
           { name: 'child', ZUID: '252n0-23n452', icon: 'cube' },
           {
-            name: 'WWWWWWWWWWWWWWWWWWWW',
+            name: 'homepages',
             ZUID: '4898-44646-12341234',
             icon: 'cube',
             children: [
@@ -48,6 +48,11 @@ const content = [
                 children: [
                   { name: 'burried', ZUID: '89234djns23u80', icon: 'cube' }
                 ]
+              },
+              {
+                name: 'node',
+                ZUID: '238-4562346',
+                icon: 'cube'
               }
             ]
           }

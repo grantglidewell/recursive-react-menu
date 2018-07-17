@@ -3,6 +3,7 @@
 .item {
   display: flex;
   align-items: baseline;
+  // background-color: darken(@nav-border-color, 3%);
   i {
     color: @zesty-gray;
     flex: 1;
@@ -17,14 +18,12 @@
     padding: 0.5rem;
     text-decoration: none;
     color: @zesty-light-blue;
-    p {
-      display: inline-block;
+    span {
       padding-left: 0.5rem;
     }
   }
-
   :hover {
-    background-color: lighten(@zesty-grey, 7%);
+    background-color: @zesty-grey;
   }
 }
 .active {
@@ -33,4 +32,3 @@
     color: @zesty-light-gray;
   }
 }
-

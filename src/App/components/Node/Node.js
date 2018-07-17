@@ -7,19 +7,18 @@ const Node = props => {
   // maybe need to check the nav bar to see if this is active?
   return (
     <li
-      className={`${styles.item} ${props.active &&
-        styles.active}`}
+      className={`${styles.item} ${props.active && styles.active}`}
       key={props.ZUID}>
       <a href={`/${props.ZUID}`}>
         <i
           className={`fa fa-${props.icon} ${props.selected === props.ZUID &&
             styles.selected}`}
         />{' '}
-        <p>{props.name}</p>
+        <span>{props.name}</span>
       </a>
       {props.children && (
         <i
-          className={props.closed ? 'fa fa-chevron-down' : 'fa fa-chevron-left'}
+          className={props.closed ? 'fa fa-chevron-left' : 'fa fa-chevron-down'}
           onClick={() => props.handleOpen(props.ZUID)}
         />
       )}
