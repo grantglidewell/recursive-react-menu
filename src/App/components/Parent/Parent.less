@@ -1,0 +1,25 @@
+@import '~@zesty-io/core/colors.less';
+
+.Parent {
+  // min-width: 340px;
+  margin: 0;
+  display: flex;
+  justify-items: flex-start;
+  flex-direction: column;
+  i {
+    margin: 0 .4rem;
+  }
+  .title {
+    color: @zesty-white;
+    background: darken(@nav-border-color, 7%);
+    font-weight: bold;
+    padding: 1rem 0;
+    letter-spacing: 1.5px;
+  }
+  ul {
+    width: 100%;
+    letter-spacing: 1px;
+    list-style: none;
+    margin-left: 0.6rem;
+  }
+}

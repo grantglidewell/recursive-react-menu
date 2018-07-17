@@ -1,0 +1,36 @@
+@import '~@zesty-io/core/colors.less';
+
+.item {
+  display: flex;
+  align-items: baseline;
+  i {
+    color: @zesty-gray;
+    flex: 1;
+    :last-child {
+      padding: 1rem;
+    }
+  }
+  .selected {
+    color: @zesty-orange;
+  }
+  a {
+    padding: 0.5rem;
+    text-decoration: none;
+    color: @zesty-light-blue;
+    p {
+      display: inline-block;
+      padding-left: 0.5rem;
+    }
+  }
+
+  :hover {
+    background-color: lighten(@zesty-grey, 7%);
+  }
+}
+.active {
+  transition: all 0.2s ease;
+  i {
+    color: @zesty-light-gray;
+  }
+}
+
