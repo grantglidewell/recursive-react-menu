@@ -1,6 +1,6 @@
 # React Nav Menu for Manager App
 
-manager app is getting react menus
+A collapsable react menu system that renders deep menu structures
 
 # installation
 
