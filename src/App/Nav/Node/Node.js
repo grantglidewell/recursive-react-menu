@@ -1,35 +1,45 @@
 import React from "react";
-// import { Link } from "react-router-dom";
-
 import styles from "./Node.less";
-export function Node(props) {
+
+export function Node({
+  active,
+  selected,
+  closed,
+  collapsed,
+  depth,
+  path,
+  icon,
+  name,
+  children,
+  handleOpen
+}) {
   // style if a node is active
-  const isActive = (props.active && styles.active) || "";
+  const isActive = (active && styles.active) || "";
   // style is a node is selected
-  const isSelected = (props.selected === props.path && styles.selected) || "";
+  const isSelected = (selected === path && styles.selected) || "";
   // check if a parent node is collapsed
-  const isClosed = props.closed && styles.closed;
+  const isClosed = closed && styles.closed;
   let isCollapsed =
-    props.collapsed &&
-    props.collapsed.reduce((acc, collapsed) => {
-      if (collapsed === props.path) acc.push(collapsed);
+    collapsed &&
+    collapsed.reduce((acc, collapsed) => {
+      if (collapsed === path) acc.push(collapsed);
       return acc;
     }, []).length;
   return (
     <li
       className={`${styles.item} ${isActive} ${
-        styles[`depth${props.depth}`]
+        styles[`depth${depth}`]
       } ${isSelected} ${isClosed}`}
-      key={props.path}
+      key={path}
     >
-      <a href={`/${props.path}`}>
-        <i className={`fa fa-${props.icon}`} />
-        <span>{props.name}</span>
+      <a href={`/${path}`}>
+        <i className={`fa fa-${icon}`} />
+        <span>{name}</span>
       </a>
-      {props.children && (
+      {children && (
         <i
           className={isCollapsed ? "fa fa-caret-left" : "fa fa-caret-down"}
-          onClick={() => props.handleOpen(props.path)}
+          onClick={() => handleOpen(path)}
         />
       )}
     </li>
