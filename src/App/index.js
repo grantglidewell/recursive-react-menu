@@ -15,6 +15,7 @@ export default class App extends Component {
     return (
       <main>
         <Nav content={content} selected={this.state.selected} />
+        <h1>{window.location.href.split("/").pop()}</h1>
       </main>
     );
   }
