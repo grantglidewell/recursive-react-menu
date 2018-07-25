@@ -2,10 +2,10 @@
 
 A collapsible react menu system that renders deep menu structures
 
-# installation
+# Installation
 
 `npm i`
 
-# usage
+# Usage
 
 `npm start`
