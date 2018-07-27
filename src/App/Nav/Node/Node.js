@@ -19,12 +19,8 @@ export function Node({
   const isSelected = (selected === path && styles.selected) || "";
   // check if a parent node is collapsed
   const isClosed = closed && styles.closed;
-  let isCollapsed =
-    collapsed &&
-    collapsed.reduce((acc, collapsed) => {
-      if (collapsed === path) acc.push(collapsed);
-      return acc;
-    }, []).length;
+  const isCollapsed =
+    collapsed && collapsed.filter(collapsed => collapsed === path).length;
   return (
     <li
       className={`${styles.item} ${isActive} ${

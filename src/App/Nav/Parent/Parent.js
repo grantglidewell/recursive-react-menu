@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { Node } from "../Node";
 
 import styles from "./Parent.less";
+
 export class Parent extends Component {
   state = {
     active: false,
@@ -48,12 +49,7 @@ export class Parent extends Component {
     // add or remove path from closed state array
     let replaceClosed = [...this.state.closed];
     if (this.state.closed.includes(path)) {
-      replaceClosed = this.state.closed.reduce((acc, e) => {
-        if (e !== path) {
-          acc.push(e);
-        }
-        return acc;
-      }, []);
+      replaceClosed = this.state.closed.filter(e => e !== path);
     } else {
       replaceClosed.push(path);
     }
