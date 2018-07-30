@@ -7,7 +7,7 @@
     "precommit": "./node_modules/.bin/pretty-quick --staged",
     "start": "npx webpack --config ./webpack.config.js --mode development --watch & webpack-dev-server --port 8080 --mode development"
   },
-  "author": "",
+  "author": "Grant Glidewell <grant.glidewell@zesty.io>",
   "license": "ISC",
   "dependencies": {
     "@zesty-io/core": "0.0.20",
