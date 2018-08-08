@@ -9,42 +9,6 @@ export class Parent extends Component {
     active: false,
     closed: []
   };
-  render() {
-    return (
-      <article
-        onMouseEnter={() => {
-          this.setState({ active: true });
-        }}
-        onMouseLeave={() => {
-          this.setState({ active: false });
-        }}
-        className={styles.Parent}
-      >
-        {/* if the item has a title, render it out */}
-        {this.props.title && (
-          <span
-            className={`${styles.title} ${this.state.active && styles.active}`}
-          >
-            <h2>
-              <i className={`fa fa-${this.props.icon} ${styles.titleIcon}`} />{" "}
-              {this.props.title}
-            </h2>
-            {Boolean(this.props.children.length) && (
-              <i
-                className={
-                  this.state.closed.includes(this.props.title)
-                    ? "fa fa-caret-left"
-                    : "fa fa-caret-down"
-                }
-                onClick={() => this.handleOpen(this.props.title)}
-              />
-            )}
-          </span>
-        )}
-        <ul>{this.renderMenuItem(this.props)}</ul>
-      </article>
-    );
-  }
   handleOpen = path => {
     // add or remove path from closed state array
     let replaceClosed = [...this.state.closed];
@@ -97,4 +61,40 @@ export class Parent extends Component {
       )
     );
   };
+  render() {
+    return (
+      <article
+        onMouseEnter={() => {
+          this.setState({ active: true });
+        }}
+        onMouseLeave={() => {
+          this.setState({ active: false });
+        }}
+        className={styles.Parent}
+      >
+        {/* if the item has a title, render it out */}
+        {this.props.title && (
+          <span
+            className={`${styles.title} ${this.state.active && styles.active}`}
+          >
+            <h2>
+              <i className={`fa fa-${this.props.icon} ${styles.titleIcon}`} />{" "}
+              {this.props.title}
+            </h2>
+            {Boolean(this.props.children.length) && (
+              <i
+                className={
+                  this.state.closed.includes(this.props.title)
+                    ? "fa fa-caret-left"
+                    : "fa fa-caret-down"
+                }
+                onClick={() => this.handleOpen(this.props.title)}
+              />
+            )}
+          </span>
+        )}
+        <ul>{this.renderMenuItem(this.props)}</ul>
+      </article>
+    );
+  }
 }

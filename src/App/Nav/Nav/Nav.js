@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 
 import { Parent } from "../Parent";
 
 import styles from "./Nav.less";
-export class Nav extends Component {
+export class Nav extends PureComponent {
   render() {
     return (
       <nav className={`${styles.Nav} ${this.props.className}`}>
